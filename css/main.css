@@ -67,24 +67,22 @@ a {
   padding: 5px 10px;
 }
 
-.btn{
-  padding: 5px 10px;
-}
-
 .list__box{
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   margin-top: 30px;
 }
 
 .list{
   display: flex;
-  align-items: center ;
+  align-items: center;
   justify-content: space-between;
 }
 
 .item{
+  width: 100%;
+  max-width: 190px;
   padding: 20px 30px;
   border: 2px solid #000;
   border-radius: 7px;
@@ -142,4 +140,46 @@ a {
   margin: 5px 0 15px;
   font-size: 17px;
   text-align: center;
+}
+
+.list__text1, .list__text2, .list__text3, .list__text4{
+  text-align: center;
+} 
+
+.form__label{
+  position: relative;
+}
+
+.is-invalid{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  background-color: #f00;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+.is-valid{
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top: 2px;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+.triangle{
+  position: absolute;
+  bottom: 0;
+  left: calc(50%);
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f00;
+  border-left: 10px solid transparent;
+}
+
+.result{
+  font-size: 14px;
 }
