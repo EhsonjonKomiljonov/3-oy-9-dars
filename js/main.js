@@ -10,6 +10,20 @@ var elText4 = document.querySelector(".list__text4");
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
+  var elInputValue = +elInput.value;
+  if (elInputValue <= 0 || isNaN(elInputValue)) {
+    elResult2.textContent = "0 dan katta son kiriting yoki harf kiritmang";
+    elResult2.classList.add("is-invalid");
+    elResult2.classList.remove("is-valid");
+    elResult1.classList.add("triangle");
+    return;
+  } else {
+    elResult2.textContent = "✅";
+    elResult2.classList.remove("is-invalid");
+    elResult2.classList.add("is-valid");
+    elResult1.classList.remove("triangle");
+  }
+
   function userSpeed(elInputValue, user) {
     var user = 3.6;
     var elInputValue = +elInput.value;
@@ -37,18 +51,4 @@ elForm.addEventListener("submit", function (evt) {
     return (elInputValue / airPlane).toFixed(1) + " Soat";
   }
   elText4.textContent = planeSpeed();
-
-  var elInputValue = +elInput.value;
-  if (elInputValue <= 0 || isNaN(elInputValue)) {
-    elResult2.textContent = "0 dan katta son kiriting yoki harf kiritmang";
-    elResult2.classList.add("is-invalid");
-    elResult2.classList.remove("is-valid");
-    elResult1.classList.add("triangle");
-    return;
-  } else {
-    elResult2.textContent = "✅";
-    elResult2.classList.remove("is-invalid");
-    elResult2.classList.add("is-valid");
-    elResult1.classList.remove("triangle");
-  }
 });
